@@ -1,20 +1,31 @@
-import java.util.Scanner;
-
 public class Q1 {
-        static String firstName = "Rajat";
-        static String lastName = "Gupta";
-        static int age = 22;
-        private static void print(){
-            System.out.println("In static method");
-            System.out.println("Rajat Gupta 22");
-        }
-        public static void main(String[] args) {
-            System.out.println("In main method");
-            System.out.println(firstName + " " + lastName + " " + age);
-            print();
-        }
-        static{
-            System.out.println("In static block");
-            System.out.println("Rajat Gupta 22");
-        }
+    static String firstName;
+    static String lastName;
+    static int age;
+    static{
+        firstName ="Rajat";
+        lastName = "Gupta";
+        age = 22;
+        System.out.println("Printing Details using static block");
+        System.out.println("First Name: " + firstName);
+        System.out.println("Last Name: " + lastName);
+        System.out.println("Age: " + age);
+    }
+    public static void print_details(){
+        System.out.println("Printing Details using static function");
+
+        System.out.println("First Name: " + firstName);
+        System.out.println("Last Name: " + lastName);
+        System.out.println("Age: " + age);
+
+    }
+    public static void main(String[] args) {
+        Q1.print_details();
+        System.out.println("Printing Details using static variable");
+
+        System.out.println("First Name: " + firstName);
+        System.out.println("Last Name: " + lastName);
+        System.out.println("Age: " + age);
+    }
 }
+
